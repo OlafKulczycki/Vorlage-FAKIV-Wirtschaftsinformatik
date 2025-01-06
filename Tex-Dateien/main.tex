@@ -1,0 +1,37 @@
+\documentclass[a4paper, 12pt, openany]{report}
+
+% Packete
+\input{Tex-Dateien/Pakete&Formatierung/Packages}
+% Jupiter Anbindungseinstellungen
+%\input{Tex-Dateien/Pakete&Formatierung/jupiterSettings}
+
+%--- Formatierung ---
+\input{Tex-Dateien/Pakete&Formatierung/Formatierung}
+
+% Allgemeine Angaben
+\title{Muster}
+\author{Max Mustermann}
+\date{\today}
+
+\addbibresource{libary.bib}
+
+\begin{document}
+
+	\fontsize{12pt}{14pt}\selectfont % Textgröße setzen
+    \pagenumbering{Roman}
+	\input{Tex-Dateien/BA_Vorgaben/Deckblatt}
+	\input{Tex-Dateien/BA_Vorgaben/Sperrvermerk}
+	\tableofcontents % Inhaltsverzeichnis erstellen
+    \input{Tex-Dateien/BA_Vorgaben/IV_Abkürzungsverzeichnis}
+    \addcontentsline{toc}{section}{Abkürzungsverzeichnis}
+	\listoffigures%Erzeugt das Abbildungsverzeichnis
+	\addcontentsline{toc}{section}{Abbildungsverzeichnis}
+    \include{Tex-Dateien/Kapitel/VI_Abstract}
+	\pagenumbering{arabic}
+    \justifying
+    %Ab hier die Kapitel Einfügen
+    \include{Tex-Dateien/Kapitel/1_Einleitung}
+	\printbibliography%Erzeugt die Literaturliste
+    \include{Tex-Dateien/BA_Vorgaben/Eidesstattliche_Versicherung}
+    
+\end{document}
